@@ -11,7 +11,7 @@
   "scripts": {
     "build": "babel src --out-dir build",
     "dev": "nodemon src/index.js --exec babel-node",
-    "start": "node build/src/index",
+    "start": "node build/index",
     "test": "jest"
   },
   "dependencies": {
@@ -26,6 +26,7 @@
     "yup": "^0.32.9"
   },
   "devDependencies": {
+    "@babel/cli": "^7.14.3",
     "@babel/core": "^7.14.3",
     "@babel/node": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
