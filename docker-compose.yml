@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+    web:
+        container_name: api-sample
+        build: .
+        command: yarn dev
+        volumes:
+            - .:/usr/app/
+            - /usr/app/node_modules
+        environment:
+            NODE_ENV: 'development'
+            DB_MONGODB_NAME_TEST: 'api_sample_test'
+            DB_MONGODB_NAME: 'api_sample'
+            DB_MONGODB_DOMAIN: 'mongodb://database_mongo'
+            PORT: 5555
+            LOGGER_LEVEL: debug
+            SECRET_KEY: 'laudo_Toxicologico_123_'
+            COCAINE: 0.5
+            AMPHETAMINE: 0.2
+            METHAMPHETAMINE: 0.2
+            MDA: 0.2
+            MDMA: 0.2
+            THC: 0.05
+            MORPHINE: 0.2
+            CODEINE: 0.2
+            HEROINE: 0.2
+        ports:
+            - '5555:5555'
+        depends_on:
+            - database_mongo
+
+    database_mongo:
+        container_name: mongodb-api-sample
+        image: 'mongo'
+        volumes:
+            - ./data:/data/db
+        ports:
+            - '27017:27017'
