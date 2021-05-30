@@ -62,7 +62,7 @@ class UserAuthentication {
             logger.info(`[USER AUTHENTICATION] Token generated -> ${token}`)
 
             return {
-                accessToken: token
+                token_acesso: token
             }
         } catch (err) {
             logger.error(`[USER AUTHENTICATION] Error -> ${err}`)

@@ -30,7 +30,7 @@
         "camelcase": [
             "warn",
             {
-                "allow": [ "codigo_amostra" ]
+                "allow": [ "codigo_amostra", "token_acesso" ]
             }
         ]
     }
