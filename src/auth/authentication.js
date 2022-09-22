@@ -23,8 +23,6 @@ class UserAuthentication {
         try {
             this.validateBase64(userEncoded)
 
-            console.log('AHHHH')
-
             const userBuffer = Buffer.from(userEncoded, 'base64')
             const userLogin = userBuffer.toString('utf8').split(':')
             const email = userLogin[0]

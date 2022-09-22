@@ -41,7 +41,7 @@ describe('Test User authentication class', () => {
         const response = await userAuthentication.generateToken(userEncoded)
 
         expect(UserAuthentication.prototype.verifyUser).toHaveBeenCalled()
-        expect(response).toHaveProperty('accessToken')
+        expect(response).toHaveProperty('token_acesso')
     })
 
     test('Teste validade base64 function', () => {

@@ -1,11 +1,8 @@
-/*
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
+import * as dotenv from 'dotenv'
 
-require('dotenv').config()
+dotenv.config()
 
-module.exports = {
+export default {
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 
@@ -186,7 +183,7 @@ module.exports = {
     // unmockedModulePathPatterns: undefined,
 
     // Indicates whether each individual test should be reported during the run
-    verbose: true
+    verbose: true,
 
     // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode
     // watchPathIgnorePatterns: [],
